@@ -5,19 +5,30 @@
 */
 
 /* COOLORS EXPORT */
-$color1: rgba(0, 15, 8, 1);
-$color2: rgba(51, 49, 46, 1);
-$color3: rgba(242, 244, 203, 1);
-$color4: rgba(251, 245, 243, 1);
-$color5: rgba(255, 49, 45, 1);
+$black: rgba(0, 15, 8, 1);
+$darkgray: rgba(51, 49, 46, 1);
+$wheat: rgba(242, 244, 203, 1);
+$white: rgba(251, 245, 243, 1);
+$orange: rgba(255, 49, 45, 1);
+$purple: rgba(74, 13, 143, 1);
+$pink: rgba(250, 42, 143, 1);
+$lightgray: rgba(255, 255, 255, 0.75);
+$white_1: #faf6fb;
+$gray: #959094;
 
 /* BASE */
-$color-primary: $color5;
-$color-secondary: $color4;
-$color-tertiary: $color1;
+$color-primary: $orange;
+$color-secondary: $white;
+$color-tertiary: $black;
 
 
 /* COLORS */
 $color-white: $color-secondary;
 $color-red: $color-primary;
 $color-black: $color-tertiary;
+$color-purple: $purple;
+$color-pink: $pink;
+$color-lightgrey: $lightgray;
+$color-white_1: $white_1;
+$color-gray: $gray;
+
