@@ -1,0 +1,105 @@
+.header {
+  background: linear-gradient(135deg, $color-purple 0%, $color-pink 100%);
+  padding: 16px;
+  position: relative;
+
+  &__logo {
+    &-image {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  &__mobile {
+    input[type=checkbox] {
+      position: absolute;
+      right: 10px;
+      visibility: hidden;
+      width: 100%;
+    }
+
+    input[type=checkbox]:checked ~ ul {
+      @include breakpoint(medium down) {
+        background: linear-gradient(135deg, $color-purple 0%, $color-pink 100%);
+        border: 0;
+        visibility: visible;
+        display: block;
+        max-height: 100vh;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      cursor: pointer;
+      display: none;
+      right: 40px;
+      width: 18px;
+      height: 12px;
+
+      @include breakpoint(medium down) {
+        display: block;
+      }
+
+      &-line {
+        @include breakpoint(medium down) {
+          width: 37px;
+          height: 2px;
+          background-color: white;
+          margin: 8px 0;
+        }
+      }
+    }
+
+    &-navigation {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+
+      @include breakpoint(medium down) {
+        width: 100%;
+        position: absolute;
+        top: 63px;
+        left: 50%;
+        transform: translatex(-50%);
+        padding-top: 33px;
+      }
+
+      &-list {
+        list-style: none;
+        padding: 6px 16px;
+
+        @include breakpoint(medium down) {
+          padding: 0;
+          text-align: center;
+          margin-bottom: 22px;
+        }
+      }
+
+      &-list--download {
+        border: 1px solid $color-white;
+        border-radius: 5px;
+        padding: 6px 21px;
+        font-size: 12px;
+        font-weight: 400;
+        color: $color-white;
+
+        &:hover {
+          background-color: $color-white;
+          color: $color-pink !important;
+        }
+      }
+
+      a {
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $font-normal;
+        color: $color-white;
+
+        &:hover {
+          color: $color-lightgrey;
+        }
+      }
+    }
+  }
+}

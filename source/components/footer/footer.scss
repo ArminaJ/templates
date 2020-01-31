@@ -1,0 +1,46 @@
+.footer {
+  padding: 56px 0;
+  background-color: $color-white_1;
+
+  &__info {
+    &-description {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: $color-gray;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-color: gray;
+        position: absolute;
+        top: 3px;
+        left: -22px;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 700;
+
+      &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-color: gray;
+        position: absolute;
+        top: 3px;
+        left: -22px;
+      }
+
+      a {
+        color: $color-pink;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
