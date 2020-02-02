@@ -63,6 +63,8 @@
         left: 50%;
         transform: translatex(-50%);
         padding-top: 33px;
+        z-index: 1;
+        display: none;
       }
 
       &-list {

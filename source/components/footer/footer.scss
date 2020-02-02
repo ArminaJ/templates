@@ -3,11 +3,19 @@
   background-color: $color-white_1;
 
   &__info {
+    @include breakpoint(medium down) {
+      margin-bottom: 32px;
+    }
+
     &-description {
       font-size: 16px;
       margin-bottom: 8px;
       color: $color-gray;
       position: relative;
+
+      @include breakpoint(medium down) {
+        text-align: center;
+      }
 
       &::before {
         content: '';
@@ -20,22 +28,35 @@
       }
     }
 
-    span {
+    &-links {
       font-size: 16px;
       font-weight: 700;
 
-      &::before {
-        content: '';
-        width: 16px;
-        height: 16px;
-        background-color: gray;
-        position: absolute;
-        top: 3px;
-        left: -22px;
+      @include breakpoint(medium down) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
-      a {
-        color: $color-pink;
+      &-link {
+        color: $color-lightpink;
+        position: relative;
+        margin-right: 24px;
+        padding-left: 8px;
+
+        &::before {
+          content: '';
+          width: 16px;
+          height: 16px;
+          background-color: $color-gray;
+          position: absolute;
+          top: 1px;
+          left: -22px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
 
         &:hover {
           text-decoration: underline;
@@ -43,4 +64,62 @@
       }
     }
   }
+
+  &__social-icons {
+    text-align: end;
+
+    @include breakpoint(medium down) {
+      text-align: center;
+    }
+
+    &-icon {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 8px;
+      border-radius: 5px;
+      color: $color-pink-2;
+      background-color: #fff;
+
+      &:hover {
+        color: $color-lightpink;
+      }
+    }
+  }
+}
+
+.footer-content {
+  background-color: #fff;
+  padding: 48px 0;
+
+  a {
+    color: #e38cb7;
+
+    &:hover {
+      color: $color-darkpink;
+      text-decoration: underline;
+    }
+  }
+
+  &__info {
+    text-align: center;
+
+    &-about {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        font-size: 12px;
+        display: inline-block;
+        margin-right: 16px;
+      }
+    }
+  }
+
 }
