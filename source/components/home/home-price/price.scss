@@ -1,0 +1,25 @@
+.price {
+  padding: 80px 0;
+  background-color: $color-white_2;
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 48px;
+
+    span {
+      font-size: 12px;
+      font-weight: $regular;
+      font-family: $font-normal;
+      color: $color-gray;
+    }
+
+    &-title {
+      font-size: 33px;
+      font-weight: $semiBold;
+      font-family: $font-normal;
+      color: $color-purple;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+  }
+}
