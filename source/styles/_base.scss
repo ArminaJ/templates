@@ -36,7 +36,9 @@ body {
 }
 
 a,
-a:hover { text-decoration: none; }
+a:hover {
+  text-decoration: none;
+}
 
 /* BLOCK ELEMENTS */
 $blockMargin: 2rem;
@@ -51,7 +53,9 @@ $blockMarginLarge: 3.5rem;
 }
 
 /* PARAGRAPHS */
-p { @extend %blockMargin; }
+p {
+  @extend %blockMargin;
+}
 
 /* LISTS */
 ul,
@@ -59,4 +63,18 @@ ol {
   @extend %blockMargin;
   padding: 0 0 0 3rem;
   list-style-position: outside;
+}
+
+.extended {
+  max-width: 1880px !important;
+
+  @include breakpoint(medium down) {
+    max-width: 130rem;
+  }
+}
+
+.align-items-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }

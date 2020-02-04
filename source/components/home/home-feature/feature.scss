@@ -1,83 +1,17 @@
-.features {
+.wrapper {
+  padding: 48px 0;
+  text-align: center;
+  background-color: $color-white_2;
 
-
-  &__wrapper {
-    padding: 48px 0;
-    text-align: center;
-
-    &-images {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-
-  &__heading {
-    text-align: center;
-    margin-bottom: 48px;
-
-    span {
-      font-size: 12px;
-      font-weight: $regular;
-      font-family: $font-normal;
-      color: $color-gray;
-    }
-
-    &-title {
-      font-size: 33px;
-      font-weight: $semiBold;
-      font-family: $font-normal;
-      color: $color-purple;
-      margin-top: 0;
-      margin-bottom: 8px;
-    }
-  }
-
-  &__card {
-    background-color: white;
-    position: relative;
-    padding: 20px;
-    display: flex;
-
-    &::before {
-      content: '';
-      background: linear-gradient(to bottom, #9477b4 0%, #fc73b4 100%);
-      color: #fc73b4;
-      width: 3px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-    }
-
-    &-icon {
-      position: relative;
-      flex-basis: 20%;
-
-      &::after {
-        position: absolute;
-        content: '';
-        width: 48px;
-        height: 48px;
-        color: $color-darkpink;
-        background: linear-gradient(to bottom, #9477b4 0%, #fc73b4 100%);
-      }
-    }
-
-    &-body {
-      flex-basis: 80%;
-
-      &-header {
-        font-size: 20px;
-        font-weight: 500;
-        color: $color-purple;
-        margin-bottom: 12px;
-        margin-top: 0;
-      }
-    }
+  &__images {
+    max-width: 100%;
+    height: auto;
   }
 }
-.features {
 
+.features {
+  padding: 80px 0;
+  background-color: $color-white_1;
 
   &__wrapper {
     padding: 48px 0;
@@ -115,6 +49,7 @@
     position: relative;
     padding: 20px;
     display: flex;
+    margin-bottom: 32px;
 
     &::before {
       content: '';
