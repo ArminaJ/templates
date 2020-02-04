@@ -1,0 +1,57 @@
+.download {
+  padding: 80px 0;
+  background: linear-gradient(135deg, $color-purple 0%, $color-pink 100%);
+  text-align: center;
+
+  &__image {
+    padding: 10px;
+    margin: 0 auto 24px;
+    width: 70px;
+    background-color: $color-white_2;
+    box-shadow: 0 0 43px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 3px;
+  }
+
+  &__title {
+    color: $color-white_2;
+    font-size: 45px;
+    font-weight: $light;
+    font-family: $font-normal;
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    @include breakpoint(medium down) {
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffb8f6;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  &__links {
+    margin: 24px 0;
+
+    &-link {
+      margin-right: 16px;
+
+      &:hover {
+        color: #111;
+        background-color: #e2e6ea;
+        border-color: #dae0e5;
+        text-decoration: none;
+      }
+    }
+  }
+
+  span {
+    color: $color-lightpink;
+    font-size: 16px;
+    font-weight: $regular;
+    font-family: $font-normal;
+  }
+}
