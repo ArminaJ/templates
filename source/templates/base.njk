@@ -95,6 +95,58 @@
         });
       });
     </script>
+    <script>
+    (function() {
+      $(function() {
+        var toggle;
+        return toggle = new Toggle('.table');
+      });
+
+      this.Toggle = (function() {
+        Toggle.prototype.el = null;
+
+        Toggle.prototype.tabs = null;
+
+        Toggle.prototype.panels = null;
+
+        function Toggle(toggleClass) {
+          this.el = $(toggleClass);
+          this.tabs = this.el.find(".table__tablist-list");
+          this.panels = this.el.find(".tab-content");
+          this.bind();
+        }
+
+        Toggle.prototype.show = function(index) {
+          var activePanel, activeTab;
+          this.tabs.removeClass('active');
+          activeTab = this.tabs.get(index);
+          $(activeTab).addClass('active');
+          this.panels.hide();
+          activePanel = this.panels.get(index);
+          return $(activePanel).show();
+        };
+
+        Toggle.prototype.bind = function() {
+          var _this = this;
+          return this.tabs.unbind('click').bind('click', function(e) {
+            return _this.show($(e.currentTarget).index());
+          });
+        };
+
+        return Toggle;
+
+      })();
+
+    }).call(this);
+    </script>
+    <script>
+    $(document).ready(function(){
+      $('ul li a').click(function(){
+        $('li a').removeClass("active");
+        $(this).addClass("active");
+    });
+    });
+    </script>
     {% block scripts %}{% endblock %}
   </body>
 </html>

@@ -2,6 +2,94 @@
   padding: 80px 0;
   background-color: $color-white_1;
 
+  &__tabs {
+    input {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      width: 315.3px;
+      text-align: center;
+      font-size: 19px;
+      font-weight: 400;
+      color: #b5a4c8;
+      background: #f5eff7;
+      padding: 16px;
+      border-color: #faf6fb #faf6fb #fff;
+      border: 1px solid transparent;
+
+      @include breakpoint(medium down) {
+        display: flex;
+        width: 100%;
+      }
+
+    }
+
+    input:checked + label {
+      background: #fff;
+      border-top-width: 3px;
+      border-color: #ce75b4 #faf6fb #fff;
+      color: $color-purple;
+    }
+
+    input:nth-of-type(1):checked ~ .table__tabs-tabcontent:nth-of-type(1),
+    input:nth-of-type(2):checked ~ .table__tabs-tabcontent:nth-of-type(2),
+    input:nth-of-type(3):checked ~ .table__tabs-tabcontent:nth-of-type(3),
+    input:nth-of-type(4):checked ~ .table__tabs-tabcontent:nth-of-type(4) {
+      display: block;
+    }
+
+    &-tabcontent {
+      display: none;
+
+      &-wrapper {
+        display: flex;
+        padding: 48px;
+        background-color: $color-white_2;
+
+        @include breakpoint(medium down) {
+          flex-direction: column;
+        }
+
+        &-image {
+          margin-right: 48px;
+        }
+
+        &-title {
+          font-size: 45px;
+          font-weight: 300;
+          color: $color-purple;
+          margin-bottom: 8px;
+          margin-top: 0;
+
+          @include breakpoint(medium down) {
+            font-size: 30px;
+          }
+        }
+
+        &-subtitle {
+          font-size: 16px;
+          font-weight: 400;
+          color: $color-lightpink;
+          margin-bottom: 32px;
+        }
+
+        &-description {
+          font-size: 16px;
+          font-weight: 400;
+          color: $color-gray;
+          line-height: 1.8;
+          margin-bottom: 16px;
+        }
+
+        &--reverse {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+
   &__heading {
     text-align: center;
     margin-bottom: 48px;
@@ -58,8 +146,8 @@
     background-color: $color-white_2;
 
     &-wrapper {
-      //display: flex;
-      display: none;
+      display: flex;
+      // display: none;
 
       @include breakpoint(medium down) {
         flex-direction: column;
