@@ -58,6 +58,42 @@
     {# Bundle #}
     <script src="/static/js/common.bundle.js"></script>
     <script>
+    //  const makeNavLinksSmooth = ( ) => {
+    //    const navLinks = document.querySelectorAll( ' a' );
+    //    for ( let n in navLinks ) {
+    //      if ( navLinks.hasOwnProperty( n ) ) {
+    //        navLinks[ n ].addEventListener( 'click', e => {
+    //          e.preventDefault( );
+    //          document.querySelector( navLinks[ n ].hash )
+    //            .scrollIntoView( {
+    //              behavior: "smooth"
+    //            } );
+    //        } );
+    //      }
+    //    }
+    //  }
+
+    //  const spyScrolling = ( ) => {
+    //    const sections = document.querySelectorAll( 'href' );
+    //    window.onscroll = ( ) => {
+    //      const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+    //      for ( let s in sections )
+    //        if ( sections.hasOwnProperty( s ) && sections[ s ].offsetTop <= scrollPos ) {
+    //          const id = sections[ s ].id;
+    //          document.querySelector( '.active' ).classList.remove( 'active' );
+    //          document.querySelector( `a[href*=${ id }]` ).parentNode.classList.add( 'active' );
+    //        }
+    //    } 
+    //  }
+
+    //  makeNavLinksSmooth( );
+    //  spyScrolling( );
+    </script>
+    <script>
+// smooth scroll
+
+    </script>
+    <script>
       $(document).ready(function(){
         $('.client-slider__carousel').slick({
           infinite: true,
@@ -69,7 +105,7 @@
           speed: 500,
           slidesToShow: 3,
           slidesToScroll: 1,
-          autoplay: true,
+          //autoplay: true,
           autoplaySpeed: 2000,
           arrows: false,
           centerMode: true,
@@ -81,71 +117,12 @@
       });
     </script>
     <script>
-      $(document).ready(function() {
-        $('a[href*=#]').bind('click', function(e) {
-            e.preventDefault();
-            var target = $(this).attr("href");
-            $('html, body').stop().animate({
-                scrollTop: $(target).offset().top
-            }, 600, function() {
-                location.hash = target;
-            });
-
-            return false;
-        });
-      });
-    </script>
-    <script>
-    (function() {
-      $(function() {
-        var toggle;
-        return toggle = new Toggle('.table');
-      });
-
-      this.Toggle = (function() {
-        Toggle.prototype.el = null;
-
-        Toggle.prototype.tabs = null;
-
-        Toggle.prototype.panels = null;
-
-        function Toggle(toggleClass) {
-          this.el = $(toggleClass);
-          this.tabs = this.el.find(".table__tablist-list");
-          this.panels = this.el.find(".tab-content");
-          this.bind();
-        }
-
-        Toggle.prototype.show = function(index) {
-          var activePanel, activeTab;
-          this.tabs.removeClass('active');
-          activeTab = this.tabs.get(index);
-          $(activeTab).addClass('active');
-          this.panels.hide();
-          activePanel = this.panels.get(index);
-          return $(activePanel).show();
-        };
-
-        Toggle.prototype.bind = function() {
-          var _this = this;
-          return this.tabs.unbind('click').bind('click', function(e) {
-            return _this.show($(e.currentTarget).index());
-          });
-        };
-
-        return Toggle;
-
-      })();
-
-    }).call(this);
-    </script>
-    <script>
-    $(document).ready(function(){
-      $('ul li a').click(function(){
-        $('li a').removeClass("active");
-        $(this).addClass("active");
-    });
-    });
+  //  $(document).ready(function(){
+  //    $('ul li a').click(function(){
+  //      $('li a').removeClass("active");
+  //      $(this).addClass("active");
+  //  });
+  //  });
     </script>
     {% block scripts %}{% endblock %}
   </body>

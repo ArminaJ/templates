@@ -1,6 +1,6 @@
 .screenshots {
   padding: 80px 0;
-  background-color: $color-white_1;
+  background-color: $color-white-lilac;
 
   &__heading {
     text-align: center;
@@ -8,7 +8,7 @@
 
     span {
       font-size: 12px;
-      font-weight: $regular;
+      font-weight: $normal;
       font-family: $font-normal;
       color: $color-gray;
     }
@@ -56,7 +56,7 @@
       text-indent: -99999px;
       overflow: hidden;
       border: none;
-      background: $color-lightpink_2;
+      background: $color-blue-chalk;
       width: 35px;
       height: 8px;
       border-radius: 10px;
@@ -64,19 +64,8 @@
     }
 
     .slick-active button {
-      background: #ff487e;
-      box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.07);
+      background: $color-pink;
+      box-shadow: 0 9px 32px 0 $color-black;
     }
-
-    // .slick-slide.slick-center + .slick-slide {
-    //   transform: scale(1.1) translateX(50%);
-    //   z-index: 10;
-    // }
-    // .slick-slide.slick-center {
-    //   transform: scale(1.55);
-    //   z-index: 30;
-    //   margin-top: -10px;
-    // }
-    
   }
 }

@@ -8,7 +8,7 @@
     margin: 0 auto 24px;
     width: 70px;
     background-color: $color-white_2;
-    box-shadow: 0 0 43px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 43px 0 $color-black;
     border-radius: 3px;
   }
 
@@ -28,7 +28,8 @@
   &__description {
     font-size: 16px;
     font-weight: 300;
-    color: #ffb8f6;
+    font-family: $font-normal--italic;
+    color: $color-pink-pastel;
     max-width: 650px;
     margin: 0 auto;
   }
@@ -40,9 +41,9 @@
       margin-right: 16px;
 
       &:hover {
-        color: #111;
-        background-color: #e2e6ea;
-        border-color: #dae0e5;
+        color: $color-black;
+        background-color: $color-white;
+        border-color: $color-white-lilac;
         text-decoration: none;
       }
     }
@@ -51,7 +52,7 @@
   span {
     color: $color-lightpink;
     font-size: 16px;
-    font-weight: $regular;
+    font-weight: $normal;
     font-family: $font-normal;
   }
 }
