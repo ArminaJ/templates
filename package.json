@@ -16,6 +16,7 @@
     "foundation-sites": "^6.5.3",
     "normalize.css": "^8.0.1",
     "remove-focus-outline": "^1.2.1",
+    "stylelint-statement-max-nesting-depth": "^2.0.1",
     "svgxuse": "^1.2.6"
   },
   "devDependencies": {
