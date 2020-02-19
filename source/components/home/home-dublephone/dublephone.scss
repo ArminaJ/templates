@@ -17,7 +17,7 @@
       margin-bottom: 24px;
       width: 70px;
       background-color: $color-white_2;
-      box-shadow: 0 0 43px 0 rgba(0, 0, 0, 0.14);
+      box-shadow: 0 0 43px 0 $color-black;
       border-radius: 3px;
     }
 
@@ -32,7 +32,7 @@
 
     &-description {
       font-size: 16px;
-      font-weight: $regular;
+      font-weight: $normal;
       font-family: $font-normal;
       color: $color-gray;
       margin-bottom: 24px;
@@ -47,7 +47,7 @@
       font-family: $font-normal;
 
       &:hover {
-        box-shadow: 0 9px 32px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 9px 32px 0 $color-black;
       }
     }
   }

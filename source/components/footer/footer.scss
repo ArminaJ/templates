@@ -1,6 +1,6 @@
 .footer {
   padding: 56px 0;
-  background-color: $color-white_1;
+  background-color: $color-white-lilac;
 
   &__info {
     @include breakpoint(medium down) {
@@ -22,7 +22,7 @@
         content: '';
         width: 16px;
         height: 16px;
-        background-color: gray;
+        background-color: $color-gray;
         position: absolute;
         top: 3px;
         left: -22px;
@@ -85,8 +85,8 @@
       line-height: 50px;
       margin: 0 8px;
       border-radius: 5px;
-      color: $color-pink-2;
-      background-color: #fff;
+      color: $color-rose;
+      background-color: $color-white_2;
 
       &:hover {
         color: $color-lightpink;
@@ -96,11 +96,11 @@
 }
 
 .footer-content {
-  background-color: #fff;
+  background-color: $color-white_2;
   padding: 48px 0;
 
   a {
-    color: #e38cb7;
+    color: $color-lightpink;
 
     &:hover {
       color: $color-darkpink;
@@ -126,5 +126,4 @@
       }
     }
   }
-
 }

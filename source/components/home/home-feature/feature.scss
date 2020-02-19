@@ -11,7 +11,7 @@
 
 .features {
   padding: 80px 0;
-  background-color: $color-white_1;
+  background-color: $color-white-lilac;
 
   &__wrapper {
     padding: 48px 0;
@@ -29,7 +29,7 @@
 
     span {
       font-size: 12px;
-      font-weight: $regular;
+      font-weight: $normal;
       font-family: $font-normal;
       color: $color-gray;
     }
@@ -45,7 +45,7 @@
   }
 
   &__card {
-    background-color: white;
+    background-color: $color-white_2;
     position: relative;
     padding: 20px;
     display: flex;
@@ -53,8 +53,8 @@
 
     &::before {
       content: '';
-      background: linear-gradient(to bottom, #9477b4 0%, #fc73b4 100%);
-      color: #fc73b4;
+      background: linear-gradient(to bottom, $color-purple 0%, $color-pink 100%);
+      color: $color-pink;
       width: 3px;
       position: absolute;
       top: 0;
@@ -64,7 +64,7 @@
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .08);
+      box-shadow: 0 5px 30px 0 $color-black;
     }
 
     &-icon {
@@ -77,7 +77,7 @@
         width: 48px;
         height: 48px;
         color: $color-darkpink;
-        background: linear-gradient(to bottom, #9477b4 0%, #fc73b4 100%);
+        background: linear-gradient(to bottom, $color-purple 0%, $color-pink 100%);
       }
     }
 

@@ -5,43 +5,48 @@
 */
 
 /* COOLORS EXPORT */
-$black: rgba(0, 15, 8, 1);
+$black: rgba(0, 15, 8, 0.3);
 $darkgray: rgba(51, 49, 46, 1);
-$wheat: rgba(242, 244, 203, 1);
 $white: rgba(251, 245, 243, 1);
-$orange: rgba(255, 49, 45, 1);
 $purple: rgba(74, 13, 143, 1);
 $pink: rgba(250, 42, 143, 1);
-$lightgray: rgba(255, 255, 255, 0.75);
-$white_1: #faf6fb;
+$gray-pastel: rgba(255, 255, 255, 0.5);
 $gray: #959094;
-$lightpink: #e38cb7;
-$pink_2: #f4c9e2;
-$darkpink: #d6619c;
+$lightgray: #d9d3d8;
+$blue-chalk: #e7d9eb;
+$white-lilac: #faf6fb;
 $white_2: #fff;
+$lightpink: #e38cb7;
+$darkpink: #d6619c;
+$pink-pastel: #ffb8f6;
+$rose: #f4c9e2;
 $lightpurple: #b5a4c8;
-$lightpink2: #e7d9eb;
-$lightgray1: #d9d3d8;
+$purple-pastel: #cd99d4;
+
 /* BASE */
-$color-primary: $orange;
+$color-primary: $purple;
 $color-secondary: $white;
 $color-tertiary: $black;
 
 
 /* COLORS */
 $color-white: $color-secondary;
-$color-red: $color-primary;
 $color-black: $color-tertiary;
-$color-purple: $purple;
-$color-pink: $pink;
-$color-lightgrey: $lightgray;
-$color-white_1: $white_1;
-$color-gray: $gray;
-$color-lightpink: $lightpink;
-$color-pink-2: $pink-2;
-$color-darkpink: $darkpink;
-$color-white_2: $white_2;
+$color-purple: $color-primary;
 $color-lightpurple: $lightpurple;
-$color-lightpink_2: $lightpink2;
-$color-lightgrey1: $lightgray1;
+$color-purple-pastel: $purple-pastel;
 
+$color-pink: $pink;
+$color-darkpink: $darkpink;
+$color-lightpink: $lightpink;
+$color-pink-pastel: $pink-pastel;
+
+$color-rose: $rose;
+$color-blue-chalk: $blue-chalk;
+
+$color-gray: $gray;
+$color-lightgrey: $lightgray;
+$color-gray-pastel: $gray-pastel;
+
+$color-white-lilac: $white-lilac;
+$color-white_2: $white_2;

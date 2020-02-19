@@ -1,6 +1,93 @@
 .table {
   padding: 80px 0;
-  background-color: $color-white_1;
+  background-color: $color-white-lilac;
+
+  &__tabs {
+    input {
+      display: none;
+
+      &:checked + label {
+        background: $color-white_2;
+        border-top-width: 3px;
+        border-color: $color-darkpink $color-white-lilac $color-white_2;
+        color: $color-purple;
+      }
+      
+      &:nth-of-type(1):checked ~ .table__tabs-tabcontent:nth-of-type(1),
+      &:nth-of-type(2):checked ~ .table__tabs-tabcontent:nth-of-type(2),
+      &:nth-of-type(3):checked ~ .table__tabs-tabcontent:nth-of-type(3),
+      &:nth-of-type(4):checked ~ .table__tabs-tabcontent:nth-of-type(4) {
+        display: block;
+      }
+    }
+
+    label {
+      display: inline-block;
+      width: 315.3px;
+      text-align: center;
+      font-size: 19px;
+      font-weight: $normal;
+      color: $color-lightpurple;
+      background: $color-white-lilac;
+      padding: 16px;
+      border-color: $color-white-lilac $color-white-lilac $color-white_2;
+      border: 1px solid transparent;
+
+      @include breakpoint(medium down) {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    &-tabcontent {
+      display: none;
+
+      &-wrapper {
+        display: flex;
+        padding: 48px;
+        background-color: $color-white_2;
+
+        @include breakpoint(medium down) {
+          flex-direction: column;
+        }
+
+        &-image {
+          margin-right: 48px;
+        }
+
+        &-title {
+          font-size: 30px;
+          font-weight: 300;
+          color: $color-purple;
+          margin-bottom: 8px;
+          margin-top: 0;
+        }
+
+        &-subtitle {
+          font-size: 16px;
+          font-weight: $normal;
+          color: $color-lightpink;
+          margin-bottom: 32px;
+        }
+
+        &-description {
+          font-size: 16px;
+          font-weight: $normal;
+          color: $color-gray;
+          line-height: 1.8;
+          margin-bottom: 16px;
+        }
+
+        &--reverse {
+          flex-direction: row-reverse;
+
+          // @include breakpoint(medium down) {
+          //   flex-direction: column;
+          // }
+        }
+      }
+    }
+  }
 
   &__heading {
     text-align: center;
@@ -8,7 +95,7 @@
 
     span {
       font-size: 12px;
-      font-weight: $regular;
+      font-weight: $normal;
       font-family: $font-normal;
       color: $color-gray;
     }
@@ -44,55 +131,12 @@
     &-link {
       display: block;
       font-size: 19px;
-      font-weight: 400;
+      font-weight: $normal;
       color: $color-lightpurple;
-      background-color: $color-white_1;
+      background-color: $color-white-lilac;
       padding: 16px;
-      border-color: $color-white_1 $color-white_1 $color-white_2;
+      border-color: $color-white-lilac $color-white-lilac $color-white_2;
       border: 1px solid transparent;
-    }
-  }
-
-  &__tabcontent {
-    padding: 48px;
-    background-color: $color-white_2;
-
-    &-wrapper {
-      //display: flex;
-      display: none;
-
-      @include breakpoint(medium down) {
-        flex-direction: column;
-      }
-
-      &-image {
-        margin-right: 48px;
-      }
-
-      &-content {
-        &-title {
-          font-size: 45px;
-          font-weight: 300;
-          color: $color-purple;
-          margin-bottom: 8px;
-          margin-top: 0;
-        }
-
-        &-subtitle {
-          font-size: 16px;
-          font-weight: 400;
-          color: $color-lightpink;
-          margin-bottom: 32px;
-        }
-
-        &-description {
-          font-size: 16px;
-          font-weight: 400;
-          color: $color-gray;
-          line-height: 1.8;
-          margin-bottom: 16px;
-        }
-      }
     }
   }
 }

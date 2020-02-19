@@ -15,20 +15,41 @@
   }
 
   &__mobile {
-    input[type=checkbox] {
-      position: absolute;
-      right: 10px;
-      visibility: hidden;
-      width: 100%;
+    #checkbox__toggle {
+      display: none;
     }
 
-    input[type=checkbox]:checked~ul {
-      @include breakpoint(medium down) {
-        background: linear-gradient(135deg, $color-purple 0%, $color-pink 100%);
-        border: 0;
-        visibility: visible;
-        display: block;
-        max-height: 100vh;
+    @include breakpoint(medium down) {
+      #checkbox__toggle {
+        position: absolute;
+        visibility: hidden;
+        right: 10px;
+
+        &:checked ~ ul {
+          background: linear-gradient(135deg, $color-purple 0%, $color-pink 100%);
+          visibility: visible;
+          display: block;
+          width: 100%;
+          max-height: 100vh;
+          height: auto;
+          transition: all 1s cubic-bezier(0.5, 1, 0.22, 1);
+        }
+
+        &:checked ~ label .header__mobile-icon-line--1 {
+          top: 7px;
+          width: 32px;
+          transform: translateX(-6px) rotate(-45deg) translateY(9px);
+        }
+  
+        &:checked ~ label .header__mobile-icon-line--2 {
+          opacity: 0;
+        }
+  
+        &:checked ~ label .header__mobile-icon-line--3 {
+          top: 22px;
+          width: 32px;
+          transform: translateX(-7px) rotate(45deg) translateY(-11px);
+        }
       }
     }
 
@@ -36,9 +57,7 @@
       position: absolute;
       cursor: pointer;
       display: none;
-      right: 40px;
-      width: 18px;
-      height: 12px;
+      right: 57px;
 
       @include breakpoint(medium down) {
         display: block;
@@ -48,8 +67,21 @@
         @include breakpoint(medium down) {
           width: 37px;
           height: 2px;
-          background-color: white;
-          margin: 8px 0;
+          background-color: $color-white_2;
+          position: absolute;
+          transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);
+        }
+
+        &--1 {
+          top: 5px;
+        }
+
+        &--2 {
+          top: 17px;
+        }
+
+        &--3 {
+          top: 29px;
         }
       }
     }
@@ -60,7 +92,6 @@
       display: flex;
       justify-content: flex-end;
 
-
       @include breakpoint(medium down) {
         width: 100%;
         position: absolute;
@@ -70,6 +101,7 @@
         padding-top: 33px;
         z-index: 1;
         display: none;
+        transition: all 1s cubic-bezier(0.325, 1, 0.22, 1);
       }
 
       &-list {
@@ -81,20 +113,13 @@
           text-align: center;
           margin-bottom: 22px;
         }
-        
-        .active {
-          color: $color-white_2;
-          text-decoration: underline;
-        }
-  
       }
 
       &-list--download {
         border: 1px solid $color-white;
         border-radius: 5px;
         padding: 6px 21px;
-        font-size: 12px;
-        font-weight: 400;
+        font-size: 12px !important;
         color: $color-white;
 
         &:hover {
@@ -105,12 +130,31 @@
 
       a {
         font-size: 14px;
-        font-weight: 400;
+        font-weight: $normal;
         font-family: $font-normal;
-        color: $color-white;
-
+        color: $color-gray-pastel;
+        
         &:hover {
-          color: $color-lightgrey;
+          color: $color-gray-pastel;
+        }
+      }
+    }
+
+    .active {
+      color: $color-white_2 !important;
+      position: relative;
+
+      &::after {
+        content: "";
+        border-bottom: 2px solid $color-purple-pastel;
+        left: 0;
+        right: 0;
+        bottom: -7px;
+        height: 1px;
+        position: absolute;
+
+        @include breakpoint(medium down) {
+          border-bottom: none;
         }
       }
     }
