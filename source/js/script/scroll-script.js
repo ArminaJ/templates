@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-loop-func */
 /* eslint-disable arrow-parens */
@@ -18,7 +19,7 @@ export default function ScrollFunction() {
     },
     scroll: () => {
       const makeNavLinksSmooth = () => {
-        for (let n in scroll.navLinks) {
+        for (const n in scroll.navLinks) {
           if (scroll.navLinks.hasOwnProperty(n)) {
             scroll.navLinks[n].addEventListener('click', e => {
               e.preventDefault();
