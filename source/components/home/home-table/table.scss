@@ -56,15 +56,11 @@
         }
 
         &-title {
-          font-size: 45px;
+          font-size: 30px;
           font-weight: 300;
           color: $color-purple;
           margin-bottom: 8px;
           margin-top: 0;
-
-          @include breakpoint(medium down) {
-            font-size: 30px;
-          }
         }
 
         &-subtitle {
@@ -85,9 +81,9 @@
         &--reverse {
           flex-direction: row-reverse;
 
-          @include breakpoint(medium down) {
-            flex-direction: column;
-          }
+          // @include breakpoint(medium down) {
+          //   flex-direction: column;
+          // }
         }
       }
     }
