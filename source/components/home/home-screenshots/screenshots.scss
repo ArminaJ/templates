@@ -31,14 +31,16 @@
       width: 370px;
       margin-right: 20px;
       position: relative;
+      transition: 0.4s ease all;
+      transform: scale(0.8);
 
       img {
         display: block;
       }
 
-      .slick-slide .slick-current .slick-center {
-        transform: scale(1) !important;
-
+      &.slick-center {
+        opacity: 1;
+        transform: scale(1);
       }
     }
 
