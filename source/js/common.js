@@ -23,3 +23,4 @@ import ScrollFunction from './script/scroll-script';
 require('svgxuse');
 
 ScrollFunction();
+

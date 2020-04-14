@@ -33,7 +33,7 @@
       border-color: $color-white-lilac $color-white-lilac $color-white_2;
       border: 1px solid transparent;
 
-      @include breakpoint(medium down) {
+      @include breakpoint(small down) {
         display: flex;
         width: 100%;
       }
@@ -47,7 +47,7 @@
         padding: 48px;
         background-color: $color-white_2;
 
-        @include breakpoint(medium down) {
+        @include breakpoint(small down) {
           flex-direction: column;
         }
 
@@ -116,7 +116,7 @@
     display: flex;
     justify-content: center;
 
-    @include breakpoint(medium down) {
+    @include breakpoint(small down) {
       display: block;
     }
 

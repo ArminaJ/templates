@@ -71,6 +71,18 @@
         });
       });
     </script>
+    <script>
+      $(document).ready(function(){
+        $('.client-slider__carousel').slick({
+          dots: false,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          centerMode: true,
+        });
+      });
+    </script>
     {% block scripts %}{% endblock %}
   </body>
 </html>
